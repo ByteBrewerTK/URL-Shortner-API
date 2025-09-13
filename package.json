@@ -1,0 +1,35 @@
+{
+	"name": "url_shortner",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "tsx watch src/server.ts",
+		"build": "tsc",
+		"start": "node dist/server.js"
+	},
+	"keywords": [],
+	"author": "Abutalif Khan",
+	"license": "ISC",
+	"description": "Modern URL Shortner",
+	"dependencies": {
+		"axios": "^1.12.1",
+		"cors": "^2.8.5",
+		"dotenv": "^17.2.2",
+		"express": "^5.1.0",
+		"geoip-lite": "^1.4.10",
+		"mongoose": "^8.18.1",
+		"redis": "^5.8.2"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.19",
+		"@types/express": "^5.0.3",
+		"@types/geoip-lite": "^1.4.4",
+		"@types/node": "^24.3.2",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"tsx": "^4.20.5",
+		"typescript": "^5.9.2"
+	}
+}
