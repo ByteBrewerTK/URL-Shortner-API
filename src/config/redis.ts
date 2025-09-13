@@ -5,7 +5,13 @@ dotenv.config();
 
 export const redisClient = createClient({
 	url: process.env.REDIS_URL,
+	// reconnect automatically if disconnected
+	socket: {
+		reconnectStrategy: (retries) => Math.min(retries * 50, 2000),
+	},
 });
+
+redisClient.on("error", (err) => console.error("Redis error:", err));
 
 redisClient
 	.connect()
